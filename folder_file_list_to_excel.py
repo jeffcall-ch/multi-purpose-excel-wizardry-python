@@ -9,8 +9,8 @@ from tempfile import TemporaryFile
 # find all files in all subfolders
 # folder = Path(r'\\AENXSTOR01.aen.ansaldo.it\share08\Auxiliary_Baden\AES\GT36 S5\Marghera spring support check\New_Drawings\MBV groups').glob('**/*')
 
-# find only pdfs in current folder - NO subfolders are searched through
-folder = Path(r'\\AENXSTOR01.aen.ansaldo.it\share08\Auxiliary_Baden\AES\GT36 S5\Marghera spring support check\New_Drawings\MBV groups').glob('*.pdf')
+# find only spcific file type in current folder - NO subfolders are searched through
+folder = Path(r'C:\Users\50000700\Desktop\TOTALS').glob('*.xls')
 
 listOfFiles = [x.name for x in folder if x.is_file()]
 
