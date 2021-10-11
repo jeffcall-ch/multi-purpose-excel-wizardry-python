@@ -2,7 +2,7 @@ import pandas as pd
 import pprint
 import csv
 
-rupsha_support_xls = r"C:\Users\50000700\Python\Python_repos\multi-purpose-excel-wizardry-python\SupportList.xls"
+rupsha_support_xls = r"C:\Users\50000700\PycharmProjects\multi-purpose-excel-wizardry-python\SupportList.xls"
 df_supp = pd.read_excel(rupsha_support_xls, header=[0], sheet_name=1)
 # print (len(df_supp))
 df_supp = df_supp.drop_duplicates(subset=['AD NUMBER'])
