@@ -16,7 +16,7 @@ pri_supports = sorted(df_TAV_PRI_supp['KKS'].tolist())
 sec_supports = sorted(df_TAV_SEC_supp['KKS'].tolist())
 
 # read loads
-loads_xls = r"C:\Users\50000700\PycharmProjects\multi-purpose-excel-wizardry-python\TAV_Support_Loads_from_PRE.xlsx"
+loads_xls = r"C:\Users\50000700\OneDrive - ansaldoenergiagroup\Desktop\Navis_xml\TAV_Support_Loads_from_PRE.xlsx"
 df_loads = pd.read_excel(loads_xls, header=[1])
 print(df_loads)
 print (df_loads.size)
@@ -34,7 +34,7 @@ df_loads_filtered = df_loads_filtered.groupby('Sec. steel in supplier scope').ap
 print(df_loads_filtered)
 print (df_loads_filtered.size)
 
-df_loads_filtered.to_excel("TAV_List_For_Supplier.xls")
+df_loads_filtered.to_excel(r"C:\Users\50000700\OneDrive - ansaldoenergiagroup\Desktop\Navis_xml\TAV_List_For_Supplier.xls")
 
 
 
