@@ -6,7 +6,7 @@ import pandas as pd
 import xlrd
 
 # recursively find all xls files in a folder (and its subfolders)
-FOLDER = r'C:\Users\50000700\Desktop\MGL_Site_Visit_30.09.2021\Isometrics_MGL_22.09.2021'
+FOLDER = r'C:\Users\50000700\OneDrive - ansaldoenergiagroup\Desktop\RUP isos\all isos'
 folder = Path(FOLDER).glob('**/*.pdf')
 listOfFiles = [x.stem[0:13] for x in folder if x.is_file()]
 # print (listOfFiles)
@@ -28,10 +28,10 @@ print (len(files_dict))
 
 
 # save the list of AD numbers into a blank excel sheet with only this info
-isos_xls = r"C:\Users\50000700\Python\Python_repos\multi-purpose-excel-wizardry-python\MGL_Iso_AD.xls"
+isos_xls = r"C:\Users\50000700\OneDrive - ansaldoenergiagroup\Desktop\RUP isos\Iso_AD_with_rev.xls"
 df_iso = pd.read_excel(isos_xls, header=[0])
 # print (df_iso)
-ebom_list = df_iso['MGL AD No.'].tolist()
+ebom_list = df_iso['AD Nos'].tolist()
 
 ebom_dict = create_ad_rev_dict(ebom_list)
 print (len(ebom_dict))
