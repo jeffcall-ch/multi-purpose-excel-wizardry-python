@@ -20,6 +20,7 @@ df_supp['CHECK OK'].str.lower()
 all_total_dwgs = 0
 all_ready_dwgs = 0
 
+# comment added
 
 summary_dicts = []
 
