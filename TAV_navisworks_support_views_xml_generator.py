@@ -109,10 +109,10 @@ for system in systems_list:
 TAV_support_xls = r"C:\Users\50000700\OneDrive - ansaldoenergiagroup\Desktop\Navis_xml\TAV Enclosure Supplier Input Supports.xlsx"
 df_TAV_PRI_supp = pd.read_excel(TAV_support_xls, sheet_name='PRI_ALL', header=[0])
 df_TAV_SEC_supp = pd.read_excel(TAV_support_xls, sheet_name='SEC_ALL', header=[0])
-df_TAV_PRI_supp["System"] = df_TAV_PRI_supp["KKS"].str[:5]
-df_TAV_SEC_supp["System"] = df_TAV_SEC_supp["KKS"].str[:5]
-pri_supports = sorted(df_TAV_PRI_supp['KKS'].tolist())
-sec_supports = sorted(df_TAV_SEC_supp['KKS'].tolist())
+df_TAV_PRI_supp["System"] = df_TAV_PRI_supp["Pipe Support KKS"].str[:5]
+df_TAV_SEC_supp["System"] = df_TAV_SEC_supp["Pipe Support KKS"].str[:5]
+pri_supports = sorted(df_TAV_PRI_supp['Pipe Support KKS'].tolist())
+sec_supports = sorted(df_TAV_SEC_supp['Pipe Support KKS'].tolist())
 pri_systems = df_TAV_PRI_supp['System'].unique()
 sec_systems = df_TAV_SEC_supp['System'].unique()
 all_pri_and_sec_supports = {"Supports directly conn.":[pri_systems, pri_supports], "Supports with sec. steel":[sec_systems, sec_supports]}
