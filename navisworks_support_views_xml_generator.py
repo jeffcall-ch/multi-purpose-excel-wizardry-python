@@ -5,9 +5,9 @@ from collections import namedtuple
 from pprint import pprint
 
 # INPUTS - DON'T FORGET TO SET THE PROJECT
-input_xml = r"C:\Users\50000700\Desktop\Navis_xml\input.xml"
-template_xml = r"C:\Users\50000700\Desktop\Navis_xml\template.xml"
-PROJECT = "PRESENZANO" # "ZERO", "MARGHERA", "PRESENZANO", "MINHANG", "TAVAZZANO", "FUSINA", "LA SPEZIA", "RUPSHA"
+input_xml = r"C:\Users\50000700\OneDrive - ansaldoenergiagroup\Desktop\Navis_xml\input.xml"
+template_xml = r"C:\Users\50000700\OneDrive - ansaldoenergiagroup\Desktop\Navis_xml\template.xml"
+PROJECT = "ZERO" # "ZERO", "MARGHERA", "PRESENZANO", "MINHANG", "TAVAZZANO", "FUSINA", "LA SPEZIA", "RUPSHA"
 
 # Define rotation and shift of the coordinates - transformation
 transformation_dict = {}
@@ -64,7 +64,7 @@ class OneView:
 
 
 # Support.xlsx processing
-support_xls = r"C:\Users\50000700\Desktop\Navis_xml\Supports.xlsx"
+support_xls = r"C:\Users\50000700\OneDrive - ansaldoenergiagroup\Desktop\Navis_xml\Supports.xlsx"
 df_supp = pd.read_excel(support_xls, header=[0])
 alfa_rad = transformation.alfa * np.pi / 180
 df_supp['Z'] = df_supp['Z'].div(1000).round(4) + transformation.z
@@ -117,5 +117,5 @@ for row_list in groupped_row_list:
 final_xml_string = final_xml_string + '\n </viewpoints> \n </exchange>'
 
 # write xml final string into xml file
-with open(r"C:\Users\50000700\Desktop\Navis_xml\output.xml", 'w') as file:
+with open(r"C:\Users\50000700\OneDrive - ansaldoenergiagroup\Desktop\Navis_xml\output.xml", 'w') as file:
     file.write(final_xml_string)
